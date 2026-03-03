@@ -3,7 +3,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.103.1-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Groq](https://img.shields.io/badge/LLM-Groq-orange?style=for-the-badge)](https://groq.com/)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg?style=for-the-badge)](https://www.gnu.org/licenses/agpl-3.0)
----
+
 *The cognitive core of Medibot V2. Orchestrating complex multi-agent medical triage, processing real-time contextual chat, and streaming synthesized speech.*
 ## 📖 Table of Contents
 - [System Architecture](#-system-architecture)
