@@ -1,0 +1,41 @@
+# Secrets and Keys (DO NOT PUSH)
+.env
+Medibot_Voice/.env
+key
+*.env
+
+# Large Data & Training Artifacts
+*.pdf
+data/
+Medibot_Voice/data/
+medibot_memory.db
+medibot.db
+router_nn.pkl
+
+# Personal Notes
+
+
+
+
+cat <<EOT > .gitignore
+# Secrets and Keys (DO NOT PUSH)
+.env
+Medibot_Voice/.env
+key
+*.env
+
+# Large Data & Training Artifacts
+*.pdf
+data/
+Medibot_Voice/data/
+medibot_memory.db
+medibot.db
+router_nn.pkl
+
+# Personal Notes
+README.md
+
+# Python/Environment
+__pycache__/
+venv/
+*.mp3
