@@ -23,7 +23,9 @@ The dual Voice Engine is engineered for ultra-fast response times, eliminating t
 | **STT (Speech-to-Text)** | `Whisper-Tiny` | Runs locally natively on `float16` precision to bypass CPU bottlenecks and execute directly on CUDA architecture. |
 | **TTS (Text-to-Speech)** | `edge_tts` + `SSE` | Employs an `EventSource` pipeline to automatically chunk audio bytecode and stream base64 encoded MP3 fragments directly to the UI avatar. |
 ### 3. Resilient Daemon Threading
-The background Voice Engine thread is heavily fortified with `try...except` recovery mechanisms. In the event of an upstream API timeout, the thread instantly broadcasts a terminal `{"action": "stop"}` payload via Server-Sent Events, ensuring the frontend client can recover gracefully and notify the user.
+The background Voice Engine thread is heavily fortified with `try...except` recovery mechanisms. 
+- **Crash Recovery:** In the event of an upstream API timeout, the thread instantly broadcasts a terminal `{"action": "stop"}` payload via Server-Sent Events.
+- **Client Safety:** This ensures the frontend client can recover gracefully and notify the user, preventing infinite loading states.
 ---
 ## 🛡️ Fortified Security
 ### Prompt Injection Shielding
@@ -35,7 +37,7 @@ Medibot V2 aggressively sanitizes text inputs originating from the Vision Scanne
 ```
 *The LLM is highly tuned to regard anything inside `<vision_data>` purely as reference material, preserving the core Medical persona.*
 ---
-## � Installation & Setup
+## ⚙️ Installation & Setup
 ### Prerequisites
 - **Python:** Version `3.10` or higher.
 - **API Keys:** A valid Groq API Key is mandatory for LLM inference.
